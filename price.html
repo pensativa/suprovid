@@ -40,51 +40,39 @@
     <section class="price">
       <div class="container">
         <h1>Тарифные планы</h1>
-        <p class="fs-5 text-center">Стоимость зависит от размера вашей команды и продолжительности подписки</p>
+        <p class="price__text fs-5 text-center">Стоимость зависит от размера вашей команды и продолжительности подписки</p>
         <div class="form-check form-switch">
-          <span class="form-label">Ежемесячно</span>
-          <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" checked="">
-          <span class="form-label">Ежегодно</span>
+          <span>Ежемесячно</span>
+          <input class="form-check-input price__toggle" type="checkbox" role="switch" id="flexSwitchCheckDefault" checked="">
+          <span>Ежегодно</span>
           <label class="form-check-label visually-hidden" for="flexSwitchCheckDefault">Выбор плана</label>
         </div>
-        <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 mb-3 text-center">
           <div class="col">
-            <div class="card border-light mb-4 shadow">
-              <div class="py-3">
-                <h4>Эконом</h4>
-                <p class="text-muted">до 50 человек</p>
-              </div>
-              <div class="card-body">
-                <p class="card-title pricing-card-title"><span class="price__period">$50</span>/месяц</p>
-                <p class="text-muted">при оплате за <span class="period">год</span></p>
-                <button type="button" class="w-100 btn btn-primary">Тестировать 14 дней</button>
-              </div>
+            <div class="card border-light mb-4 shadow card-body">
+              <h4 class="h5">Эконом</h4>
+              <p class="text-muted">до 50 человек</p>
+              <p class="card-title pricing-card-title h4"><span class="price__period" data-month="$100" data-year="$50">$50</span>/месяц</p>
+              <p class="text-muted">при оплате за <span class="period">год</span></p>
+              <button type="button" class="w-100 btn btn-primary">Тестировать 14 дней</button>
             </div>
           </div>
           <div class="col">
-            <div class="card border-light mb-4 shadow">
-              <div class="py-3">
-                <h4>Стандарт</h4>
-                <p class="text-muted">от 51 до 250 человек</p>
-              </div>
-              <div class="card-body">
-                <p class="card-title pricing-card-title"><span class="price__period">$100</span>/месяц</p>
-                <p class="text-muted">при оплате за <span class="period">год</span></p>
-                <button type="button" class="w-100 btn btn-primary">Тестировать 14 дней</button>
-              </div>
+            <div class="card border-light mb-4 shadow card-body">
+              <h4 class="h5">Стандарт</h4>
+              <p class="text-muted">от 51 до 250 человек</p>
+              <p class="card-title pricing-card-title h4"><span class="price__period" data-month="$150" data-year="$100">$100</span>/месяц</p>
+              <p class="text-muted">при оплате за <span class="period">год</span></p>
+              <button type="button" class="w-100 btn btn-primary">Тестировать 14 дней</button>
             </div>
           </div>
           <div class="col">
-            <div class="card border-light mb-4 shadow">
-              <div class="py-3">
-                <h4>Профи</h4>
-                <p class="text-muted">от 251 человека</p>
-              </div>
-              <div class="card-body">
-                <p class="card-title pricing-card-title"><span class="price__period">$150</span>/месяц</p>
-                <p class="text-muted">при оплате за <span class="period">год</span></p>
-                <button type="button" class="w-100 btn btn-primary">Тестировать 14 дней</button>
-              </div>
+            <div class="card border-light mb-4 shadow card-body">
+              <h4 class="h5">Профи</h4>
+              <p class="text-muted">от 251 человека</p>
+              <p class="card-title pricing-card-title h4"><span class="price__period" data-month="$200" data-year="$150">$150</span>/месяц</p>
+              <p class="text-muted">при оплате за <span class="period">год</span></p>
+              <button type="button" class="w-100 btn btn-primary">Тестировать 14 дней</button>
             </div>
           </div>
         </div>

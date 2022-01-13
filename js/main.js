@@ -1,8 +1,13 @@
 //Slider
+const carouselFunction = function() {
+  const myCarousel = document.querySelector('#carousel');
+  const carousel = new bootstrap.Carousel(myCarousel);
+};
 
-var myCarousel = document.querySelector('#carousel');
-var carousel = new bootstrap.Carousel(myCarousel);
-
+const slider = document.querySelector('.slider');
+if (slider) {
+  carouselFunction();
+}
 //Mobile menu
 
 const menuToggle = document.querySelector('.navbar-toggler');
@@ -21,7 +26,6 @@ menuToggle.onclick = function() {
 const up = document.getElementById('to-top');
 
 window.onscroll = function() {
-  console.log(window.pageYOffset);
   if(window.pageYOffset > 200) {
     up.style.display = 'block';
   } else {
@@ -35,3 +39,45 @@ up.onclick = function() {
     behavior: "smooth"
   });
 };
+
+//Price block
+const priceBlockFunction = function() {
+  const switchToggle = document.querySelector('.price__toggle');
+  const periods = document.querySelectorAll('.period');
+  const prices = document.querySelectorAll('.price__period');
+
+  switchToggle.onchange = function() {
+    for (let period of periods) {
+      if(switchToggle.checked) {
+        period.textContent = 'год';
+      } else {
+        period.textContent = 'месяц';
+      }
+    }
+
+    for (let price of prices) {
+      if(switchToggle.checked) {
+        price.textContent = price.dataset.year;
+      } else {
+        price.textContent = price.dataset.month;
+      }
+    }
+  };
+};
+
+const pricePage = document.querySelector('.price');
+if (pricePage) {
+  priceBlockFunction();
+}
+
+//Left navbar QA page
+
+/*const links = document.querySelectorAll('.qa__nav .nav-link');
+const blocks = document.querySelectorAll('.qa__accordion');
+window.onscroll = function() {
+  for (let block of blocks) {
+    if(block.getBoundingClientRect().top > 30 && block.getBoundingClientRect().bottom < 0) {
+      console.log(block);
+    }
+  }
+};*/

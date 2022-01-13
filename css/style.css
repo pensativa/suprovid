@@ -16,7 +16,8 @@ body {
 a {
   display: inline-block;
   -webkit-transition: 0.3s;
-  transition: 0.3s; }
+  transition: 0.3s;
+  text-decoration: none; }
   a:hover, a:focus {
     color: #147AA9; }
 
@@ -556,12 +557,9 @@ template {
 .price {
   margin: 100px 0; }
   .price h1 {
-    font-size: 36px;
+    font-size: 46px;
     margin-bottom: 20px;
     text-align: center; }
-  .price .fs-5 {
-    max-width: 500px;
-    margin: 0 auto 50px; }
   .price .form-check {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -569,10 +567,140 @@ template {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin-bottom: 30px; }
-  .price .form-check-input {
-    margin: 0 10px;
-    width: 60px;
-    height: 30px; }
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 30px;
+    font-weight: 600;
+    padding-left: 0; }
+  .price .card-title, .price .h5 {
+    font-weight: 700; }
+  .price .card {
+    border-radius: 15px; }
+
+.price__text {
+  max-width: 550px;
+  margin: 0 auto 50px; }
+
+.price__toggle {
+  margin: 0 10px;
+  width: 60px;
+  height: 30px; }
+
+.qa__title .container {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 3rem; }
+
+.qa__title h1 {
+  max-width: 500px;
+  font-size: 2.5rem; }
+
+.qa__nav {
+  -webkit-box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+  padding: 25px 0;
+  max-width: 280px;
+  font-weight: 600;
+  font-size: 18px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0; }
+  .qa__nav .nav-link.active,
+  .qa__nav .nav-link:focus,
+  .qa__nav .nav-link:hover,
+  .qa__nav .nav-link:target {
+    color: #333333; }
+
+.qa__accordion .accordion-item {
+  border-color: #ccc; }
+
+.qa__accordion.accordion-flush .accordion-item:last-child {
+  border-bottom: 1px solid #ccc; }
+
+.qa__accordion .accordion-button {
+  padding-right: 0;
+  padding-left: 0;
+  font-size: 18px;
+  font-weight: 600; }
+
+.qa__accordion .accordion-button.collapsed::after {
+  background-image: url("../img/cross.svg");
+  background-size: 24px;
+  background-position: center; }
+
+.qa__accordion .accordion-button::after {
+  background-image: url("../img/min.svg");
+  background-size: 24px auto;
+  background-position: center; }
+
+.qa__accordion .accordion-button:focus {
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none; }
+
+.qa__accordion .accordion-button:not(.collapsed) {
+  color: inherit;
+  background-color: inherit; }
+
+.qa__accordion .accordion-body {
+  padding-right: 0;
+  padding-left: 0;
+  padding-top: 0;
+  font-weight: 300; }
+
+@media (max-width: 768px) {
+  .qa__nav {
+    margin: 0 auto 2rem;
+    position: static; } }
+
+.no-page {
+  min-height: 655px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.no-page__header {
+  background-color: #147AA9;
+  -webkit-box-shadow: 0px 4px 16px rgba(20, 122, 169, 0.16);
+          box-shadow: 0px 4px 16px rgba(20, 122, 169, 0.16); }
+  .no-page__header .header__logo {
+    -webkit-filter: brightness(0) invert(1);
+            filter: brightness(0) invert(1); }
+
+.no-page__main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto; }
+  .no-page__main h1 {
+    font-size: 2rem; }
+
+.no-page__main .container {
+  background: url("../img/not.png") no-repeat top right;
+  height: 100%;
+  height: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end; }
+
+@media (max-width: 992px) {
+  .no-page__main .container {
+    background-size: 40% auto; } }
+
+@media (max-width: 768px) {
+  .no-page__main .container {
+    background-size: 50% auto; } }
+
+@media (max-width: 380px) {
+  .no-page__main .container {
+    background-size: auto 150px; }
+  .no-page__main h1 {
+    margin-top: 180px; } }
 
 /*# sourceMappingURL=style.css.map */
