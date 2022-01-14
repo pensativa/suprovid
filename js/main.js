@@ -23,22 +23,27 @@ menuToggle.onclick = function() {
 
 //Button to top
 
-const up = document.getElementById('to-top');
-
-window.onscroll = function() {
+const scrollToTop = function() {
+  const up = document.getElementById('to-top');
   if(window.pageYOffset > 200) {
     up.style.display = 'block';
   } else {
     up.style.display = 'none';
   }
-}
 
-up.onclick = function() {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  });
+  up.onclick = function() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  };
 };
+
+window.onscroll = function() {
+  scrollToTop();
+};
+
+
 
 //Price block
 const priceBlockFunction = function() {
@@ -72,12 +77,36 @@ if (pricePage) {
 
 //Left navbar QA page
 
-/*const links = document.querySelectorAll('.qa__nav .nav-link');
-const blocks = document.querySelectorAll('.qa__accordion');
-window.onscroll = function() {
-  for (let block of blocks) {
-    if(block.getBoundingClientRect().top > 30 && block.getBoundingClientRect().bottom < 0) {
-      console.log(block);
+const leftNavbarFunction = function() {
+  const links = document.querySelectorAll('.qa__nav .nav-link');
+
+  window.onscroll = function() {
+    scrollToTop();
+    var scrollPos = window.pageYOffset;
+    links.forEach(link => {
+      var attr = link.getAttribute('href').replace(/[^a-zа-яё0-9\s]/gi, '');
+      var refElement = document.getElementById(attr);
+      if (refElement.getBoundingClientRect().top <= scrollPos) {
+        if (!link.classList.contains('active')) {
+          links.forEach(element => element.classList.remove('active'));
+          link.classList.add('active');
+        }
+      }
+    });
+  };
+
+  for (let link of links) {
+    link.onclick = function() {
+      if (!link.classList.contains('active')) {
+        links.forEach(element => element.classList.remove('active'));
+        link.classList.add('active');
+      }
     }
   }
-};*/
+};
+
+const navbar = document.querySelector('.qa__nav');
+
+if (navbar) {
+  leftNavbarFunction();
+}
