@@ -582,7 +582,7 @@ template {
   max-width: 550px;
   margin: 0 auto 50px; }
 
-.price__toggle {
+#flexSwitchCheckDefault.price__toggle {
   margin: 0 10px;
   width: 60px;
   height: 30px; }
