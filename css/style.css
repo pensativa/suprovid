@@ -1,6 +1,40 @@
 @charset "UTF-8";
 /*Шрифты*/
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,600;1,700;1,800;1,900&family=Nunito:wght@300;400;600;700;800&display=swap");
+@font-face {
+  font-family: "Nunito";
+  src: url("../fonts/Nunito-Light.woff") format("woff"), url("../fonts/Nunito-Light.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap; }
+
+@font-face {
+  font-family: "Nunito";
+  src: url("../fonts/Nunito-Regular.woff") format("woff"), url("../fonts/Nunito-Regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap; }
+
+@font-face {
+  font-family: "Nunito";
+  src: url("../fonts/Nunito-SemiBold.woff") format("woff"), url("../fonts/Nunito-SemiBold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap; }
+
+@font-face {
+  font-family: "Nunito";
+  src: url("../fonts/Nunito-Bold.woff") format("woff"), url("../fonts/Nunito-Bold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap; }
+
+@font-face {
+  font-family: "Nunito";
+  src: url("../fonts/Nunito-ExtraBold.woff") format("woff"), url("../fonts/Nunito-ExtraBold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap; }
+
 /*Переменные*/
 body {
   font-size: 16px;
@@ -388,7 +422,8 @@ template {
     background-position: top center;
     letter-spacing: 0;
     max-width: 300px;
-    font-size: 20px; }
+    font-size: 20px;
+    margin: 0 auto 10px; }
   .adv__list li:nth-of-type(1) h3 {
     background-image: url("../img/stopwatch.svg"); }
   .adv__list li:nth-of-type(2) h3 {
@@ -464,7 +499,10 @@ template {
   padding: 60px 0;
   color: #fff;
   position: relative;
-  margin-top: 204px; }
+  margin-top: 204px;
+  font-size: 18px; }
+  .callback .form-control {
+    font-size: 16px; }
   .callback h3 {
     color: #fff;
     font-size: 36px; }
@@ -493,7 +531,8 @@ template {
     top: 2px;
     right: 13px;
     border-radius: 25px;
-    padding: 4px 20px 3px; }
+    padding: 4px 20px 3px;
+    font-size: 20px; }
 
 #to-top {
   width: 44px;
@@ -511,8 +550,8 @@ template {
 
 @media (max-width: 1400px) {
   .slider {
-    background-size: 425px auto;
-    background-position: top right -30px; } }
+    background-size: 50% auto;
+    background-position: top right -7%; } }
 
 @media (max-width: 992px) {
   .header .container {
@@ -595,10 +634,14 @@ template {
     font-size: 19px !important; }
   .adv__list > li:not(:last-of-type) {
     margin-bottom: 10px; }
+  .slider {
+    background-size: 425px auto;
+    background-position: top right -30px; }
   .tasks .row {
     margin-bottom: 30px; }
   .callback {
-    padding: 52px 0; }
+    padding: 52px 0;
+    font-size: 16px; }
   .callback h3 {
     font-size: 36px; }
   .callback::after {
@@ -618,7 +661,6 @@ template {
     margin-bottom: 39px; }
   .carousel-text h3 {
     margin-bottom: 18px;
-    max-width: 320px;
     line-height: 1.4; }
   .carousel-text {
     line-height: 1.4; }
