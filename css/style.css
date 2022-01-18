@@ -58,7 +58,8 @@ body {
 main {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
-          flex: 1 1 auto; }
+          flex: 1 1 auto;
+  position: relative; }
 
 a {
   display: inline-block;
@@ -551,19 +552,22 @@ template {
   height: 44px;
   position: fixed;
   bottom: 18px;
-  right: 4%;
+  right: auto;
   border-radius: 8px;
   background: #147AA9 url("../img/up.svg") no-repeat center/16px 20px;
   display: none;
   -webkit-transition: 0.3s;
-  transition: 0.3s; }
+  transition: 0.3s;
+  margin-left: 175px; }
   #to-top:hover, #to-top:focus {
     background-color: #0B629C; }
 
 @media (max-width: 1400px) {
   .slider {
     background-size: 50% auto;
-    background-position: top right -7%; } }
+    background-position: top right -7%; }
+  #to-top {
+    margin-left: 110px; } }
 
 @media (max-width: 992px) {
   .header .container {
@@ -661,7 +665,9 @@ template {
   .callback__form {
     max-width: 55%; }
   .tasks__img {
-    background-size: 325px auto; } }
+    background-size: 325px auto; }
+  #to-top {
+    margin-left: 8%; } }
 
 @media (max-width: 768px) {
   .slider {
@@ -698,13 +704,21 @@ template {
     height: 45px; }
   .footer .col-0 {
     display: none;
-    visibility: hidden; } }
+    visibility: hidden; }
+  #to-top {
+    margin-left: 5%;
+    margin-left: -44px; } }
 
 @media (min-width: 1400px) {
   .container, .container-lg,
   .container-md, .container-sm,
   .container-xl, .container-xxl {
     max-width: 1350px; } }
+
+@media (max-width: 540px) {
+  #to-top {
+    margin-left: 0;
+    right: 16px; } }
 
 .price {
   margin: 30px 0 55px; }

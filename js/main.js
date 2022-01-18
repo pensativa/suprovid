@@ -25,7 +25,7 @@ menuToggle.onclick = function() {
 
 const scrollToTop = function() {
   const up = document.getElementById('to-top');
-  if(window.pageYOffset > 200) {
+  if(window.pageYOffset > 100) {
     up.style.display = 'block';
   } else {
     up.style.display = 'none';
